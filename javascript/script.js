@@ -11,11 +11,20 @@ const themeBtn = document.querySelector('.edits-text-theme')
 const buttons = document.querySelectorAll('.btn')
 const colorsText = document.querySelectorAll('.colors-item .btn')
 const themesText = document.querySelectorAll('.themes-text')
+const colorChange = document.querySelector('.color-change')
 
 let mask = document.querySelector('.lds-spinner')
 
 window.addEventListener('load', () => {
     mask.classList.add('hide')
+})
+
+// Color change
+buttons.forEach(btne => {
+    btne.addEventListener('click', () => {
+        const colored = btne.getAttribute('data-color')
+        colorChange.innerHTML = colored
+    })
 })
 
 addBtn.addEventListener('click', () => {
@@ -29,7 +38,7 @@ addBtn.addEventListener('click', () => {
 
         doneCircle.classList.add('done-circle')
         removeBtn.classList.add('remove')
-        removeBtn.classList.add('btn')
+        removeBtn.classList.add('btnf')
         removeBtn.innerText = '-'
 
         // Done button
@@ -39,14 +48,18 @@ addBtn.addEventListener('click', () => {
             p.classList.toggle('done')
         })
 
+        done.style.backgroundColor = colorChange.innerText
+        doneCircle.style.borderColor = colorChange.innerText
+
         // Color change
         buttons.forEach(btne => {
             btne.addEventListener('click', () => {
                 const colored = btne.getAttribute('data-color')
-                done.style.background = colored
-                doneCircle.style.border = '2px solid' + colored
+                done.style.backgroundColor = colored
+                doneCircle.style.borderColor = colored
             })
         })
+
 
         const li = document.createElement('li')
         li.classList.add('list-group-item')
@@ -94,15 +107,11 @@ colorBtn.addEventListener('click', () => {
     colors.classList.toggle('active')
     themeBtn.classList.toggle('active')
     themes.classList.remove('active')
-    doneBtn.classList.add('none')
-    edit.classList.remove('none')
 })
 
 themeBtn.addEventListener('click', () => {
     themes.classList.toggle('active')
     colors.classList.remove('active')
-    doneBtn.classList.add('none')
-    edit.classList.remove('none')
 })
 
 colorsText.forEach(col => {
