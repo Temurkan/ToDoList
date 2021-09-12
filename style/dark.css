@@ -314,6 +314,19 @@ h1 {
   outline: none;
 }
 
+.btnf {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  font-size: 40px;
+  font-family: "SFUI";
+  color: #aaa;
+  cursor: pointer;
+}
+
+.btnf:focus {
+  outline: none;
+}
 
 .list-group li {
   height: 100%;
@@ -342,6 +355,10 @@ h1 {
   border-radius: 50%;
   box-shadow: inset 0px 2px 2px #2d2d2d, 0px 0px 2px #2d2d2d,
     0px -2px 2px #4e4e4e;
+}
+
+.color-change {
+  display: none;
 }
 
 p {
