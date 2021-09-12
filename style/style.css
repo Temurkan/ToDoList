@@ -30,7 +30,7 @@
   height: 100vh;
   z-index: 100;
   padding: 25% 47%;
-  background-color: #fff;
+  background-color: #1c1c1e;
 }
 .lds-spinner div {
   transform-origin: 40px 40px;
@@ -111,6 +111,7 @@ body {
   font-family: "SFUI-reg";
   transition: 0.5s;
   z-index: 99;
+  background-color: #1c1c1e;
 }
 
 .container {
@@ -118,7 +119,7 @@ body {
   padding: 0px;
   border: 7px solid #243f4a;
   border-radius: 93px;
-  box-shadow: 0px 0px 100px #909090;
+  box-shadow: 0px 0px 100px #616161;
 }
 
 .block {
@@ -129,7 +130,7 @@ body {
 }
 
 .interface {
-  background: url(../img/wall.jpg);
+  background: url(../img/wall-darks.jpg);
   background-size: contain cover;
   width: 500px;
   height: 940px;
@@ -148,7 +149,6 @@ body {
 
 i {
   cursor: pointer;
-  background-color: #fff;
   border-radius: 50%;
 }
 
@@ -160,7 +160,7 @@ h1 {
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: #e2e2e2b2 1px 1px 1px;
+  text-shadow: #e2e2e2 1px 1px 1px;
   margin-right: 180px;
 }
 
@@ -178,17 +178,19 @@ h1 {
 
 .edits {
   display: none;
+  color: #e2e2e2;
 }
 
 .edits.active {
   display: block;
+  color: #e2e2e2;
 }
 
 .edits-text-color,
 .edits-text-theme {
   width: 100%;
   padding: 10px 0;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid #2d2d2d;
   font-size: 25px;
   cursor: pointer;
 }
@@ -224,9 +226,10 @@ h1 {
 
 .colors-item .colors-text {
   width: 100%;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid #2d2d2d;
   padding-bottom: 15px;
   margin-bottom: -20px;
+  color: #e2e2e2;
 }
 
 .btn-blue i {
@@ -268,14 +271,15 @@ h1 {
 
 .themes .themes-text {
   width: 100%;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid #2d2d2d;
   padding: 10px 0;
   cursor: pointer;
+  color: #e2e2e2;
 }
 
 .form {
   display: flex;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid #2d2d2d;
 }
 
 .form input {
@@ -284,12 +288,12 @@ h1 {
   background: none;
   border: none;
   font-size: 25px;
-  color: #000;
+  color: #e2e2e2;
 }
 
 .form input::placeholder {
   font-size: 25px;
-  color: #2d2d2d;
+  color: #e2e2e2;
 }
 
 .form input:focus {
@@ -310,13 +314,27 @@ h1 {
   outline: none;
 }
 
+.btnf {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  font-size: 40px;
+  font-family: "SFUI";
+  color: #aaa;
+  cursor: pointer;
+}
+
+.btnf:focus {
+  outline: none;
+}
+
 .list-group li {
   height: 100%;
   display: flex;
   align-items: center;
   padding: 10px;
-  border-bottom: 2px solid #aaa;
-  color: #2d2d2d;
+  border-bottom: 2px solid #2d2d2d;
+  color: #e2e2e2;
 }
 
 .done-circle {
@@ -335,8 +353,12 @@ h1 {
   height: 28px;
   background: #909090;
   border-radius: 50%;
-  box-shadow: inset 0px 2px 2px #525252, 0px 0px 2px #8a8a8a,
-    0px -2px 2px #8a8a8a;
+  box-shadow: inset 0px 2px 2px #2d2d2d, 0px 0px 2px #2d2d2d,
+    0px -2px 2px #4e4e4e;
+}
+
+.color-change {
+  display: none;
 }
 
 p {
