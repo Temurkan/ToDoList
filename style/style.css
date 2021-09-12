@@ -1,0 +1,358 @@
+@font-face {
+  font-family: "SFUI";
+  src: url(../fonts/SFUIText-Light.ttf);
+}
+@font-face {
+  font-family: "SFUI-reg";
+  src: url(../fonts/SFUIDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: "SFUI-med";
+  src: url(../fonts/SFUIDisplay-Medium.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lds-spinner.hide {
+  display: none;
+}
+
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  padding: 25% 47%;
+  background-color: #1c1c1e;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+body {
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
+  font-family: "SFUI-reg";
+  transition: 0.5s;
+  z-index: 99;
+}
+
+.container {
+  margin: 2px;
+  padding: 0px;
+  border: 7px solid #243f4a;
+  border-radius: 93px;
+  box-shadow: 0px 0px 100px #909090;
+}
+
+.block {
+  border: 5px solid #000;
+  border-radius: 85px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.interface {
+  background: url(../img/wall.jpg);
+  background-size: contain cover;
+  width: 500px;
+  height: 940px;
+  padding: 30px 30px 0;
+  overflow: scroll;
+}
+
+.interface::-webkit-scrollbar {
+  width: 0;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+i {
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "SFUI-med";
+  background-color: #2d2d2d;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: #e2e2e2b2 1px 1px 1px;
+  margin-right: 180px;
+}
+
+.edit,
+.done-btns {
+  font-size: 20px;
+  color: #007aff;
+  cursor: pointer;
+}
+
+.edit.none,
+.done-btns.none {
+  display: none;
+}
+
+.edits {
+  display: none;
+}
+
+.edits.active {
+  display: block;
+}
+
+.edits-text-color,
+.edits-text-theme {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 2px solid #aaa;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.edits-text-color.active,
+.edits-text-theme.active {
+  display: none;
+}
+
+.colors {
+  display: none;
+}
+
+.colors.active {
+  display: block;
+}
+
+.colors-item {
+  display: flex;
+  font-size: 20px;
+  padding: 5px 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+.colors-item .btn {
+  margin-right: 15px;
+}
+
+.colors-item .btn i {
+  font-size: 30px;
+}
+
+.colors-item .colors-text {
+  width: 100%;
+  border-bottom: 2px solid #aaa;
+  padding-bottom: 15px;
+  margin-bottom: -20px;
+}
+
+.btn-blue i {
+  color: #007aff;
+}
+
+.btn-brown i {
+  color: #9d8561;
+}
+
+.btn-green i {
+  color: #15c759;
+}
+
+.btn-orange i {
+  color: #fe9402;
+}
+
+.btn-purple i {
+  color: #bf77db;
+}
+
+.btn-red i {
+  color: #ff3c30;
+}
+
+.btn-yellow i {
+  color: #fecc04;
+}
+
+.themes {
+  font-size: 20px;
+  display: none;
+}
+
+.themes.active {
+  display: block;
+}
+
+.themes .themes-text {
+  width: 100%;
+  border-bottom: 2px solid #aaa;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  border-bottom: 2px solid #aaa;
+}
+
+.form input {
+  width: 93%;
+  height: 50px;
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: #000;
+}
+
+.form input::placeholder {
+  font-size: 25px;
+  color: #2d2d2d;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.btn {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  font-size: 40px;
+  font-family: "SFUI";
+  color: #aaa;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.list-group li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #aaa;
+  color: #2d2d2d;
+}
+
+.done-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #909090;
+  background: none;
+  padding: 0.25rem;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.done-circle .done-btn {
+  width: 28px;
+  height: 28px;
+  background: #909090;
+  border-radius: 50%;
+  box-shadow: inset 0px 2px 2px #525252, 0px 0px 2px #8a8a8a,
+    0px -2px 2px #8a8a8a;
+}
+
+p {
+  width: 350px;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+
+p.done {
+  color: #909090;
+}
+
+p::-webkit-scrollbar {
+  width: 0;
+}
+
+p::selection {
+  background: none;
+}

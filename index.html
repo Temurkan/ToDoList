@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/dark.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- TAB ICON  -->
+    <link rel="icon" href="img/list-icon.svg" />
+    <title>To do list</title>
+  </head>
+  <body>
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="container">
+      <div class="block">
+        <div class="interface">
+          <div class="top">
+            <h1>Schedule</h1>
+            <p class="edit">Edit</p>
+            <p class="done-btns none">Done</p>
+          </div>
+          <div class="edits">
+            <p class="edits-text-color">Color</p>
+            <p class="edits-text-theme">Theme</p>
+          </div>
+          <div class="colors">
+            <div class="colors-item">
+                <button class="btn btn-blue" data-color="#007aff"><i class="fas fa-circle"></i></button>
+                <p class="colors-text">Blue</p>
+            </div>
+            <div class="colors-item">
+                <button class="btn btn-brown" data-color="#9d8561"><i class="fas fa-circle"></i></button>
+                <p class="colors-text">Brown</p>
+            </div>
+            <div class="colors-item">
+                <button class="btn btn-green" data-color="#15c759"><i class="fas fa-circle"></i></button>
+                <p class="colors-text">Green</p>
+            </div>
+            <div class="colors-item">
+                <button class="btn btn-orange" data-color="#fe9402"><i class="fas fa-circle"></i></button>
+                <p class="colors-text">Orange</p>
+            </div>
+            <div class="colors-item">
+                <button class="btn btn-purple" data-color="#bf77db"><i class="fas fa-circle"></i></button>
+                <p class="colors-text">Purple</p>
+            </div>
+            <div class="colors-item">
+                <button class="btn btn-red" data-color="#ff3c30"><i class="fas fa-circle"></i></button>
+                <p class="colors-text">Red</p>
+            </div>
+            <div class="colors-item">
+                <button class="btn btn-yellow" data-color="#fecc04"><i class="fas fa-circle"></i></button>
+                <p class="colors-text">Yellow</p>
+            </div>
+          </div>
+          <div class="themes">
+              <p class="themes-text dark">Dark</p>
+              <p class="themes-text light">Light</p>
+          </div>
+          <div class="form">
+            <input type="text" class="form-control" placeholder="Enter task" />
+            <button class="add btn">+</button>
+          </div>
+          <ul class="list-group">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+    <script src="javascript/theme.js"></script>
+  </body>
+</html>
