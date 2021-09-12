@@ -46,6 +46,7 @@ addBtn.addEventListener('click', () => {
             done.classList.toggle('done-btn')
             done.classList.add('active')
             p.classList.toggle('done')
+            p.style.textDecoration = 'line-through'
         })
 
         done.style.backgroundColor = colorChange.innerText
