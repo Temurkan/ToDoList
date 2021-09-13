@@ -371,6 +371,10 @@ p.done {
   color: #909090;
 }
 
+p.decor {
+  text-decoration: line-through;
+}
+
 p::-webkit-scrollbar {
   width: 0;
 }
